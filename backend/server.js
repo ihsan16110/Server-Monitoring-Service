@@ -86,7 +86,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3002',
+    origin: 'http://localhost:3001',
     methods: ['GET', 'POST']
   }
 });
@@ -134,7 +134,8 @@ const fetchMetrics = async () => {
   });
 };
 
-setInterval(fetchMetrics, 10000);
+// setInterval(fetchMetrics, 10000);
+setInterval(fetchMetrics, 1000);
 
 server.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
