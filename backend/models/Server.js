@@ -7,5 +7,7 @@ const serverSchema = new mongoose.Schema({
   location: String,
 });
 
-module.exports = mongoose.model('Server', serverSchema);
+// module.exports = mongoose.model('Server', serverSchema);
+const ServerModel = mongoose.model('Server', serverSchema);
+module.exports = ServerModel;
 

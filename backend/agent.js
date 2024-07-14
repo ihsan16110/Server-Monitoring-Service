@@ -3,7 +3,8 @@ const axios = require('axios');
 const os = require('os-utils');
 
 const SERVER_URL = 'http://central-server-ip:3000/api/metrics';
-const SERVER_ID = 'your-server-id'; // Replace with the actual server ID
+// const SERVER_ID = 'your-server-id'; // Replace with the actual server ID
+const SERVER_ID = '66937ae461bc4a48d96f3e4a';
 
 const collectData = () => {
   os.cpuUsage((cpuUsage) => {
@@ -26,4 +27,3 @@ const collectData = () => {
 };
 
 setInterval(collectData, 10000); // Send data every 10 seconds
-

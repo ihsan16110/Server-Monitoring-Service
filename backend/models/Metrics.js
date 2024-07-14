@@ -10,5 +10,7 @@ const metricsSchema = new mongoose.Schema({
   network: Number,
 });
 
-module.exports = mongoose.model('Metrics', metricsSchema);
+// module.exports = mongoose.model('Metrics', metricsSchema);
+const Metrics = mongoose.model('Metrics',metricsSchema);
+module.exports = Metrics;
 
